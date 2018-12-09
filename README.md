@@ -3,7 +3,7 @@ A tool to deal with windows information
 
 ## APIs
 
-* stop system sleep
+* stop system from sleeping
 ```
 
 //stop system sleeping
