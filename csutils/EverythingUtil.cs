@@ -5,7 +5,7 @@ using System.Text;
 
 namespace csutils
 {
-    class EverythingUtil
+    public class EverythingUtil
     {
         public static bool checkEverything()
         {

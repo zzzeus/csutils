@@ -6,7 +6,7 @@ using System.Text;
 
 namespace csutils
 {
-    class Desktop
+    public class Desktop
     {
         static IntPtr sdview = IntPtr.Zero;
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]

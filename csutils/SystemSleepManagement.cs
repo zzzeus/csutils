@@ -17,7 +17,7 @@ namespace csutils
     /// 调用Windows API函数SystemParametersInfo()来关闭屏幕保护程序，
     /// 播放结束后再重新打开。
     /// </summary>
-    class SystemSleepManagement
+    public class SystemSleepManagement
     {
         //定义API函数
         [DllImport("kernel32.dll")]
