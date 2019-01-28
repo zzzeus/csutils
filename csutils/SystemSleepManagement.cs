@@ -19,6 +19,7 @@ namespace csutils
     /// </summary>
     public class SystemSleepManagement
     {
+        public static bool isBlocked = false;
         //定义API函数
         [DllImport("kernel32.dll")]
         static extern uint SetThreadExecutionState(ExecutionFlag flags);
@@ -37,6 +38,7 @@ namespace csutils
         /// <param name="includeDisplay">是否阻止关闭显示器</param>
         public static void PreventSleep(bool includeDisplay = false)
         {
+            isBlocked = true;
             if (includeDisplay)
                 SetThreadExecutionState(ExecutionFlag.System | ExecutionFlag.Display | ExecutionFlag.Continus);
             else
@@ -48,6 +50,7 @@ namespace csutils
         /// </summary>
         public static void ResotreSleep()
         {
+            isBlocked = false;
             SetThreadExecutionState(ExecutionFlag.Continus);
         }
 
