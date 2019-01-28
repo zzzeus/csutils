@@ -9,7 +9,7 @@ using System.Text;
 
 namespace csutils
 {
-    public class EverythingUtil
+     class EverythingUtil
     {
         const int EVERYTHING_OK = 0;
         const int EVERYTHING_ERROR_MEMORY = 1;
@@ -303,5 +303,41 @@ namespace csutils
             return File.Exists(Path.Combine(fi1.DirectoryName, "Everything64.dll"));
         }
 
+    }
+    public class EverthingHelper
+    {
+        /// <summary>
+        /// search files in local disks
+        /// </summary>
+        /// <param name="pattern"></param>
+        /// <returns></returns>
+        public static List<string> search(string pattern)
+        {
+            return EverythingUtil.search(pattern);
+        }
+        /// <summary>
+        /// check if everything is running
+        /// </summary>
+        /// <returns></returns>
+        public static bool checkEverything()
+        {
+            return EverythingUtil.checkEverything();
+        }
+        /// <summary>
+        /// check if everythingsdk is availble
+        /// </summary>
+        /// <returns></returns>
+        public static bool checkSDK()
+        {
+            return EverythingUtil.checkSDK();
+        }
+        /// <summary>
+        /// get all shortcut file
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> getLink()
+        {
+            return search("*.link");
+        }
     }
 }
